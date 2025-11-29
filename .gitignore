@@ -1,0 +1,23 @@
+# Java compiled files
+bin/
+out/
+target/
+*.class
+
+# VS Code settings (keep only shared ones)
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Build artifacts
+*.jar
+*.war
+*.zip
+*.tar.gz
+
+# Logs
+*.log

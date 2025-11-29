@@ -1,0 +1,31 @@
+__________________________________________________
+  _          _         ____                  _   
+ | |    __ _(_)_ __   / ___|_ __ _   _ _ __ | |_ 
+ | |   / _` | | '__| | |   | '__| | | | '_ \| __|
+ | |__| (_| | | |    | |___| |  | |_| | |_) | |_ 
+ |_____\__,_|_|_|     \____|_|   \__, | .__/ \__|
+                                 |___/|_|        
+__________________________________________________
+
+This is a rogue-like dungeon crawler. Your goal is to make it to the final vault.
+
+Rumour has it, dwelling deep within is The Sleeping Revenant.
+
+No more is known about this beast, anyone who has laid eye upon them has succumb to it.
+
+Good luck.
+
+
+|          | Menu |               |            | Stats |            |          | Controls |           |
+|                                 |                                 |                                 |
+|  New game                       |  Character level: y             |         <---  Cursor            |
+|                                 |                                 |                                 |
+|  Load game                      |  Gold earned: y                 |   W - Up                        |
+|                                 |                                 |   S - Down                      |
+|  Save game                      |  Vault1: y                      |   A - Left                      |
+|                                 |  Vault2: y                      |   D - Right                     |
+|                                 |  Vault3: y                      |   I - Inventory                 |
+|                                 |  Vault4: y                      |   J - Journal                   |
+|                                 |  Vault5: y                      |            'Select'             |
+|  Quit                           |  Boss: y                        |        Then press Enter         |
+|                                 |                                 |                                 |
