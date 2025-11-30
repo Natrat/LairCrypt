@@ -6,14 +6,12 @@ import game.States.State;
 
 public class StateManager {
     private final GameData data;
-    private final InputManager inputManager;
     private State currentState;
     private boolean running = true;
 
-    public StateManager(GameData data, InputManager inputManager) { // Constructor
+    public StateManager(GameData data) { // Constructor
         this.data = data;
-        this.inputManager = inputManager;
-        this.currentState = new MenuState(this, inputManager, data); // Start the game in the MenuState
+        this.currentState = new MenuState(this, data); // Start the game in the MenuState
         this.currentState.onEnter();
     }
 

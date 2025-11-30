@@ -1,0 +1,40 @@
+[
+    {
+        "id": "GOBLIN",
+        "name": "Goblin",
+        "baseHealth": 10,
+        "attackDamage": 3,
+        "attackSpeed": 1,
+        "xpDrop": 10,
+        "dropTable": "COMMON",
+        "enemyType": "Flesh",
+        "artFile": "goblin.txt"
+
+    },
+
+    {
+        "id": "SKELETON",
+        "name": "Skeleton",
+        "baseHealth": 20,
+        "attackDamage": 3,
+        "attackSpeed": 1,
+        "xpDrop": 20,
+        "dropTable": "COMMON",
+        "enemyType": "Bone",
+        "artFile": "skeleton.txt"
+
+    },
+    
+    {
+        "id": "BOB",
+        "name": "Skeleton",
+        "baseHealth": 20,
+        "attackDamage": 3,
+        "attackSpeed": 1,
+        "xpDrop": 20,
+        "dropTable": "COMMON",
+        "enemyType": "Bone",
+        "artFile": "skeleton.txt"
+
+    }
+]

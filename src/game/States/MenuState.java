@@ -11,7 +11,6 @@ public class MenuState implements State {
 
     private final StateManager stateManager;
     private final GameData data;
-    private final InputManager inputManager;
 
     private String lastInput;
     private String selection;
@@ -19,22 +18,21 @@ public class MenuState implements State {
 
     private int selectionTracker;
     // List of Strings that will be looked for on menu
-    private String[] selectableStrings = { "New game", "Load game", "Save game", "Quit" };
+    private String[] playerOptions = { "New game", "Load game", "Save game", "Developer", "Quit"};
 
-    public MenuState(StateManager stateManager, InputManager inputManager, GameData data) {
+    public MenuState(StateManager stateManager, GameData data) {
         this.stateManager = stateManager;
-        this.inputManager = inputManager;
         this.data = data;
     }
 
     public void onEnter() {
         selectionTracker = 0;
-        highlightedText = selectableStrings[0];
+        highlightedText = playerOptions[0];
         render();
     }
 
     public void update() {
-        lastInput = inputManager.readLine("Input your command: ");
+        lastInput = data.inputManager.readLine("Input your command: ");
         userControl();
         userSelection();
     }
@@ -42,31 +40,33 @@ public class MenuState implements State {
     public void userControl() {
         if (isUp(lastInput)) {
             if (selectionTracker == 0)
-                selectionTracker = selectableStrings.length - 1;
+                selectionTracker = playerOptions.length - 1;
             else
                 selectionTracker -= 1;
         } else if (isDown(lastInput)) {
-            if (selectionTracker == selectableStrings.length - 1)
+            if (selectionTracker == playerOptions.length - 1)
                 selectionTracker = 0;
             else
                 selectionTracker += 1;
         } else if (isSelect(lastInput)) {
-            selection = selectableStrings[selectionTracker];
+            selection = playerOptions[selectionTracker];
         }
-        highlightedText = selectableStrings[selectionTracker];
+        highlightedText = playerOptions[selectionTracker];
     }
 
     public void userSelection() {
         if (selection == null)
             return;
         if (selection.equals("New game")) {
-            stateManager.setState(new GameState(stateManager,inputManager, data));
+            stateManager.setState(new GameState(stateManager, data));
         } else if (selection.equals("Load game")) {
-            stateManager.setState(new LoadGameState(stateManager, inputManager, data));
+            stateManager.setState(new LoadGameState(stateManager, data));
         } else if (selection.equals("Save game")) {
-            stateManager.setState(new SaveGameState(stateManager, inputManager, data));
+            stateManager.setState(new SaveGameState(stateManager, data));
         } else if (selection.equals("Quit")) {
             stateManager.stopRunning();
+        } else if (selection.equals("Developer")){
+            stateManager.setState(new DeveloperState(stateManager, data));
         }
         selection = null;
     }
@@ -79,6 +79,7 @@ public class MenuState implements State {
 
     public void render() {
         Display.clearScreen();
-        Display.drawMainMenu(highlightedText);
+        //Display.drawMainMenu(highlightedText);
+        Display.drawMainMenuDeveloper(highlightedText);
     }
 }

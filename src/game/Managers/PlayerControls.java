@@ -27,6 +27,6 @@ public class PlayerControls {
     }
 
     public static boolean isSelect(String input) {
-        return "select".equalsIgnoreCase(input);
+        return "e".equalsIgnoreCase(input);
     }
 }

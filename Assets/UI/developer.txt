@@ -24,7 +24,7 @@ Good luck.
 |                                 |                                 |   S - Down                      |
 |  Save game                      |  Vault1: y                      |   A - Left                      |
 |                                 |  Vault2: y                      |   D - Right                     |
-|                                 |  Vault3: y                      |   I - Inventory                 |
+|  Developer                      |  Vault3: y                      |   I - Inventory                 |
 |                                 |  Vault4: y                      |   J - Journal                   |
 |                                 |  Vault5: y                      |   E - Select                    |
 |  Quit                           |  Boss: y                        |        Then press Enter         |

@@ -3,14 +3,16 @@ package game;
 import game.Managers.StateManager;
 import game.Managers.InputManager;
 import game.Data.GameData;
+import game.Data.DataLoader;
 
 public class Main{
     public static void main(String[] args) throws InterruptedException {
-        // create data class called gameData, pass it through
         GameData data = new GameData();
-        InputManager inputManager = new InputManager();
+
+        DataLoader dataLoader = new DataLoader();
+        dataLoader.initialiseData(data);
         
-        StateManager stateManager = new StateManager(data, inputManager);
+        StateManager stateManager = new StateManager(data);
         stateManager.run();
     }
 }

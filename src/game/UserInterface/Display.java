@@ -12,6 +12,10 @@ public class Display {
         printFromFile("Assets/UI/mainmenu.txt", selectableString);
     }
 
+    public static void drawMainMenuDeveloper(String selectableString){
+        printFromFile("Assets/UI/developer.txt", selectableString);
+    }
+
     public static void printFromFile(String path, String selectableString) {
         Path p = Path.of(path);
         try (Scanner scanner = new Scanner(p)) {
