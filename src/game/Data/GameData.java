@@ -8,8 +8,8 @@ import game.Managers.InputManager;
 
 public class GameData {
     public final InputManager inputManager = new InputManager();
-
-    private final PlayerData playerData = new PlayerData();
+    public final MessageLog messageLog = new MessageLog();
+    public final PlayerData playerData = new PlayerData();
 
     private final Map<String, EnemyDefinition> enemiesByID = new HashMap<>();
 

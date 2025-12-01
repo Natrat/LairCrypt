@@ -33,11 +33,11 @@ public class MenuState implements State {
 
     public void update() {
         lastInput = data.inputManager.readLine("Input your command: ");
-        userControl();
+        menuSelection();
         userSelection();
     }
 
-    public void userControl() {
+    private void menuSelection() {
         if (isUp(lastInput)) {
             if (selectionTracker == 0)
                 selectionTracker = playerOptions.length - 1;
@@ -54,7 +54,7 @@ public class MenuState implements State {
         highlightedText = playerOptions[selectionTracker];
     }
 
-    public void userSelection() {
+    private void userSelection() {
         if (selection == null)
             return;
         if (selection.equals("New game")) {

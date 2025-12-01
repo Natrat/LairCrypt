@@ -7,7 +7,6 @@ import java.io.FileReader;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 public class DataLoader {
     Gson gson = new Gson();
 

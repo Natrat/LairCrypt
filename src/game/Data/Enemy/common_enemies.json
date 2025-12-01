@@ -7,34 +7,46 @@
         "attackSpeed": 1,
         "xpDrop": 10,
         "dropTable": "COMMON",
-        "enemyType": "Flesh",
+        "enemyType": "FLESH",
+        "biome": ["CATACOMBS", "FLOODED_TUNNELS", "BONE_PITS", "FUNGAL_CRYPT", "ROTTING_CHAMBERS"],
         "artFile": "goblin.txt"
-
     },
 
     {
         "id": "SKELETON",
         "name": "Skeleton",
         "baseHealth": 20,
-        "attackDamage": 3,
+        "attackDamage": 5,
         "attackSpeed": 1,
-        "xpDrop": 20,
+        "xpDrop": 33,
         "dropTable": "COMMON",
-        "enemyType": "Bone",
+        "biome": ["CATACOMBS", "BONE_PITS", "FUNGAL_CRYPT", "ROTTING_CHAMBERS", "ROYAL_TOMBS"],
+        "enemyType": "BONE",
         "artFile": "skeleton.txt"
-
     },
     
     {
-        "id": "BOB",
-        "name": "Skeleton",
-        "baseHealth": 20,
-        "attackDamage": 3,
+        "id": "SCAVENGER",
+        "name": "Scavenger",
+        "baseHealth": 15,
+        "attackDamage": 4,
         "attackSpeed": 1,
         "xpDrop": 20,
         "dropTable": "COMMON",
-        "enemyType": "Bone",
-        "artFile": "skeleton.txt"
-
+        "biome": ["CATACOMBS", "CURSED_LIBRARY", "ROYAL_TOMBS"],
+        "enemyType": "FLESH",
+        "artFile": "scavenger.txt"
+    },
+    {
+        "id": "ZOMBIE",
+        "name": "Zombie",
+        "baseHealth": 35,
+        "attackDamage": 2,
+        "attackSpeed": 1,
+        "xpDrop": 25,
+        "dropTable": "COMMON",
+        "biome": ["FUNGAL_CRYPT", "ROTTING_CHAMBERS"],
+        "enemyType": "UNDEAD",
+        "artFile": "zombie.txt"
     }
 ]

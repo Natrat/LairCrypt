@@ -19,6 +19,7 @@ public class StateManager {
         while (running) {
             currentState.update();
             currentState.render();
+            data.messageLog.displayMessages();
 
             //Thread.sleep(300); // 'sleep' or such, make a tick rate
         }

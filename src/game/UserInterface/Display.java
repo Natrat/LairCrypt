@@ -7,6 +7,7 @@ public class Display {
     private static final int CURSOR_OFFSET = 2;
     private static final String CURSOR = "<---";
 
+
     public static void drawMainMenu(String selectableString) {
         // Takes in selectionTracker, gives it to printFromFile
         printFromFile("Assets/UI/mainmenu.txt", selectableString);

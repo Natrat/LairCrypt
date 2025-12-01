@@ -1,6 +1,8 @@
 package game.Data.Enemy;
 
-import game.Data.Rarity;
+import game.Data.EnemyType;
+import game.Data.Types.Biome;
+import game.Data.Types.Rarity;
 
 public class EnemyDefinition {
     public String id;
@@ -10,7 +12,7 @@ public class EnemyDefinition {
     public int attackSpeed;
     public int xpDrop;
     public Rarity dropTable;
-    public String enemyType;
-    public String biome;
+    public EnemyType enemyType;
+    public Biome[] biome;
     public String artFile;
 }
